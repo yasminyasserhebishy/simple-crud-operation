@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="py-5 position-relative">
+<div class="crud-body container py-4 mt-3 rounded-1 shadow-lg text-center m-auto">
+  <h1>CRUD OPERATION</h1>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="productName" placeholder="productName" oninput="validation(this)">
+ <div class="alert alert-danger d-none"><small>product name must be 3 to 50 characters long and contain only letters, numbers, and spaces.</small></div>
+  <label for="productName">product Name</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="productPrice" placeholder="productPrice"  oninput="validation(this)">
+   <div class="alert alert-danger d-none"><small>Please enter a valid positive number, with up to two decimal places.</small></div>
+  <label for="productPrice">product Price</label>
+</div>
+<div class="form-floating mb-3">
+  <input list="catList" type="text" class="form-control" id="productCat" placeholder="productCat"  oninput="validation(this)">
+   <div class="alert alert-danger d-none"><small>Invalid product category! Choose from: Tv, Android, Laptop, or iPhone.</small></div>
+  <label for="productCat">product Category</label>
+
+<datalist id="catList">
+  <option value="Tv">
+  <option value="Laptop">
+  <option value="Iphone">
+  <option value="Android">
+</datalist>
+</div>
+<div class="form-floating mb-3">
+  <textarea type="number" class="form-control" id="productDesc" placeholder="productDesc"  oninput="validation(this)"></textarea>
+   <div class="alert alert-danger d-none"><small>product description must be between 4 and 500 characters long.</small></div>
+  <label for="productDesc">product Description</label>
+</div>
+<button id="addBtn" class="add btn  text-white">Add Product</button>
+<button id="updateBtn" class="update btn  text-white d-none">update Product</button>
+<input type="text" class="mt-3 w-50 m-auto form-control" id="productSearch" placeholder="productSearch">
+<div class="container m-auto mt-4 p-4 ">
+  <div class="row" id="demo" >
+
+  </div>
+</div> 
+</div>
+     <div class="position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none bg-black bg-opacity-25" id="boxModal">
+        <div class="bg-white p-4 rounded-2 shadow-lg position-fixed translate-middle-y">
+             <header class="w-100 d-flex justify-content-end  mb-3 h-100 ">
+            <button class="text-dark btn border-0" id="closeBtn">
+              <i class=" fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2 fw-bolder fs-5">
+           can't add or update product, Please follow the rules.
+          </p>
+        </div>
+      </div>
+</main>
+
+
+
+<script src="js/all.min.js"></script>
+      <script src="js/index.js">
+   </script>
+     <script src="js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

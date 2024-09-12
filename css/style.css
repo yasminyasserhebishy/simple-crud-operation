@@ -1,0 +1,20 @@
+main{
+    background-color: #6482AD;
+    min-height: 100vh;
+   
+}
+.add ,.update{
+    background-color: #6482AD;
+   
+}
+.crud-body{
+    background-color: #c5c1c1;
+}
+
+h1{
+    color: #6482AD;
+}
+.btn:hover {
+background-color: #184e9a;
+    border-color: #F5F5F5;
+}
